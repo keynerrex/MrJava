@@ -24,7 +24,7 @@ public class matriz {
             }
 
         }
-        //
+        //salto de linea
         System.out.println();
         //
 
