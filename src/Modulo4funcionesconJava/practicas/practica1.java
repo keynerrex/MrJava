@@ -8,10 +8,10 @@ public class practica1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Escriba un numero: ");
+        System.out.print("Escriba un numero: ");
         int num1 = in.nextInt();
 
-        System.out.println("Escriba otro numero: ");
+        System.out.print("Escriba otro numero: ");
         int num2 = in.nextInt();
 
         suma(num1, num2);
@@ -20,7 +20,7 @@ public class practica1 {
 
     static void suma(int a, int b) {
         int suma = a + b;
-        System.out.println("La suma es " + suma);
+        System.out.println("La suma es: " + suma);
 
     }
 }
