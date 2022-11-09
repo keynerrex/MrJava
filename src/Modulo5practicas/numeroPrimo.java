@@ -24,14 +24,23 @@ public class numeroPrimo {
 
     }
 
+    /**
+     * <h2>Funcion Es Primo </h2>
+     * Descripion: Detecta si un numero es primo o no
+     *
+     * @param numero Recibe un numero entero
+     * @return Retorna un valor booleano indicando si el numero recibido es
+     * primo o no
+     */
     //funcion del numero primo
     static boolean esPrimo(int numero) {
-
         int contador = 0;
 
         int[] numeros = new int[numero];
 
-        for (int i = 0; i < numeros.length; i++) {//No entendi esta parte
+        for (int i = 0;
+                i < numeros.length;
+                i++) {//No entendi esta parte
             numeros[i] = i + 1;
 
         }
@@ -45,6 +54,7 @@ public class numeroPrimo {
 
             }
         }
-        return contador == 0; //vuelve al contador
+        return contador
+                == 0; //vuelve al contador
     }
 }
