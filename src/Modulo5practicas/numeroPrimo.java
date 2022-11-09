@@ -23,7 +23,7 @@ public class numeroPrimo {
         }
 
     }
-
+    //DOCUMENTACIO javaDoc
     /**
      * <h2>Funcion Es Primo </h2>
      * Descripion: Detecta si un numero es primo o no
