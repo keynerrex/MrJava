@@ -21,6 +21,8 @@ class TestPersona {
         System.out.println(persona1.getNombre());
         System.out.println(persona1.getEdad());
 
-    }
+        //Mostrar toda la info
+        System.out.println(persona1);
 
+    }
 }
