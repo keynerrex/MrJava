@@ -8,7 +8,7 @@ public class numero1 {
 //        char a = 45;
 //        System.out.println(a);
 
-        //con variable general
+        //Con variable general
         var nombre = "Keyner";
         var apellido = "Oliveros";
         String completo = nombre + " " + apellido;
