@@ -50,7 +50,8 @@ public class Persona {
     //Sobreescribir metodos predefinidos
     @Override
     public String toString() {
-        return "Persona: [Nombre: %s, Edad: %d, Estado: %b] ".formatted(this.nombre, this.edad, this.eliminado);
+        return "Persona: [Nombre: %s, Edad: %d, Estado: %b] "
+                .formatted(this.nombre, this.edad, this.eliminado);
 
     }
 }
