@@ -1,5 +1,7 @@
 package herenciaPOO;
 
+import java.util.Objects;
+
 public class Persona {
 
     //CLASE PADRE USE PROTECTED 
@@ -74,6 +76,46 @@ public class Persona {
 
     public String obtenerDetalle() {
         return "Nombre: %s Edad: %d ".formatted(this.nombre, this.edad);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.nombre);
+        hash = 67 * hash + this.genero;
+        hash = 67 * hash + this.edad;
+        hash = 67 * hash + Objects.hashCode(this.direccion);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+        {
+            return true;
+        }
+        if (obj == null)
+        {
+            return false;
+        }
+        if (getClass() != obj.getClass())
+        {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.genero != other.genero)
+        {
+            return false;
+        }
+        if (this.edad != other.edad)
+        {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre))
+        {
+            return false;
+        }
+        return Objects.equals(this.direccion, other.direccion);
     }
 
 }
