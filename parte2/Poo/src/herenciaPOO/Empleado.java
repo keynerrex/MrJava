@@ -3,7 +3,7 @@ package herenciaPOO;
 
 public class Empleado extends Persona {
 
-    private final int idEmpleado;
+    private int idEmpleado;
     private double salario;
     private static int contadorEmpleado;
 
