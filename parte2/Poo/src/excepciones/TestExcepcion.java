@@ -15,10 +15,8 @@ public class TestExcepcion {
         //Para continuar la ejecucucion do while
         boolean continuarExe = true;
         //mientras que while sea true
-        do
-        {
-            try
-            {
+        do {
+            try {
                 System.out.println("Numero 1: ");
                 int n1 = in.nextInt();
                 System.out.println("Numero 2: ");
@@ -31,19 +29,15 @@ public class TestExcepcion {
 //        System.out.println(resultado);
                 //Clase padre Exception
                 //para el erro si no se da
-            } catch (OperadorExcepcion e)
-            {
+            } catch (OperadorExcepcion e) {
                 System.err.println("Error: " + e.getMessage());
                 in.nextLine();
 //                e.printStackTrace(System.out);
-            } catch (ArithmeticException e)
-            {
+            } catch (ArithmeticException e) {
                 System.err.println("ERROR: No se puede dividir entre cero");
-            } catch (Exception e)
-            {
+            } catch (Exception e) {
                 e.printStackTrace(System.out);
-            } finally
-            {
+            } finally {
                 System.out.println("Se reviso la division");
             }
         } while (continuarExe);
@@ -51,8 +45,7 @@ public class TestExcepcion {
     }
 
     static int dividir(int n, int d) {
-        if (d == 0)
-        {
+        if (d == 0) {
             throw new OperadorExcepcion("Division entre 0");
         }
         return n / d;
