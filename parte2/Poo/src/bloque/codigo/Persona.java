@@ -7,7 +7,7 @@ public class Persona {
 
     static
     {
-        System.out.println("Ejecuion Bloque Estatico");
+        System.out.println("Ejecucion Bloque Estatico");
         ++Persona.contadorPersona;
 
     }
