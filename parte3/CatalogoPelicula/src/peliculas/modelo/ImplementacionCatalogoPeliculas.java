@@ -16,6 +16,10 @@ public class ImplementacionCatalogoPeliculas implements ICatalogoPeliculas {
         this.ListaPeliculas.add(nombrePelicula.toString());
     }
 
+    public ImplementacionCatalogoPeliculas(ArrayList<String> ListaPeliculas) {
+        this.ListaPeliculas = ListaPeliculas;
+    }
+    
     @Override
     public void listarPelicula() {
         JOptionPane.showMessageDialog(

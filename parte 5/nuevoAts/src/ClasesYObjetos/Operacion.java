@@ -42,4 +42,27 @@ public class Operacion {
         System.out.println("La division es: " + division);
 
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 59 * hash + this.numero1;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Operacion other = (Operacion) obj;
+        return this.numero1 == other.numero1;
+    }
+
 }

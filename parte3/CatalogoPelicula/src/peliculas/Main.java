@@ -2,6 +2,7 @@ package peliculas;
 
 import java.util.ArrayList;
 import peliculas.ui.UIPeliculas;
+import saludo.Saludo;
 
 public class Main {
 
@@ -10,18 +11,12 @@ public class Main {
 
         //arraylist solo almacena objetos
         ArrayList<String> meses = new ArrayList<>();
-
-        //añadir objetos
-        meses.add("Enero");
-        meses.add("Febrero");
-        meses.add("Marzo");
-
-        System.out.println(meses);
-
-        //iterar array
-        meses.forEach(dato -> {
-            System.out.println(dato);
-        });
+        Saludo hl = new Saludo();
+        hl.saludar("Hola");
+        hl.toString();
+        for (String r : meses) {
+            System.out.println(r);
+        }
     }
 
 }

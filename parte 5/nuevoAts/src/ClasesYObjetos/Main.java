@@ -12,6 +12,8 @@ public class Main {
         op.division();
 
         op.mostrarResultados();
+        System.out.println(op.equals(op));
+        System.out.println(op.hashCode());
     }
 
 }
