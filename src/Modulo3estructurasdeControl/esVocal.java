@@ -29,58 +29,57 @@ public class esVocal {
         } else {
             System.out.printf("%s no es VOCAL\n", let);
         }
-
-        //Metodo con switch y casos
-        if (null == let) {
-            System.out.printf("%s no es VOCAL\n", let);
-        } else //Metodo if else varias condiciones
-        {
-            switch (let) {
-                case "a":
-                case "A":
-                    System.out.printf("%s es VOCAL\n", let);
-                    break;
-                case "e":
-                case "E":
-                    System.out.printf("%s es VOCAL\n", let);
-                    break;
-                case "i":
-                case "I":
-                    System.out.printf("%s es VOCAL\n", let);
-                    break;
-                case "o":
-                case "O":
-                    System.out.printf("%s es VOCAL\n", let);
-                    break;
-                case "u":
-                case "U":
-                    System.out.printf("%s es VOCAL\n", let);
-                    break;
-                default:
-                    System.out.printf("%s no es VOCAL\n", let);
-                    break;
-            }
-        }
-
+//
+//        //Metodo con switch y casos
+//        if (null == let) {
+//            System.out.printf("%s no es VOCAL\n", let);
+//        } else //Metodo if else varias condiciones
+//        {
+//            switch (let) {
+//                case "a":
+//                case "A":
+//                    System.out.printf("%s es VOCAL\n", let);
+//                    break;
+//                case "e":
+//                case "E":
+//                    System.out.printf("%s es VOCAL\n", let);
+//                    break;
+//                case "i":
+//                case "I":
+//                    System.out.printf("%s es VOCAL\n", let);
+//                    break;
+//                case "o":
+//                case "O":
+//                    System.out.printf("%s es VOCAL\n", let);
+//                    break;
+//                case "u":
+//                case "U":
+//                    System.out.printf("%s es VOCAL\n", let);
+//                    break;
+//                default:
+//                    System.out.printf("%s no es VOCAL\n", let);
+//                    break;
+//            }
+//        }
         //otro metodo resumido con switch(Es mejor para mi)
-        if (null == let) {
-            System.out.printf("%s no es VOCAL\n", let);
-        } else //Metodo if else varias condiciones
-        {
-            switch (let) {
-                case "a", "A" ->
-                    System.out.printf("%s es VOCAL\n", let);
-                case "e", "E" ->
-                    System.out.printf("%s es VOCAL\n", let);
-                case "i", "I" ->
-                    System.out.printf("%s es VOCAL\n", let);
-                case "o", "O" ->
-                    System.out.printf("%s es VOCAL\n", let);
-                case "u", "U" ->
-                    System.out.printf("%s es VOCAL\n", let);
-                default ->
-                    System.out.printf("%s no es VOCAL\n", let);
-            }
-        }
+//        if (null == let) {
+//            System.out.printf("%s no es VOCAL\n", let);
+//        } else //Metodo if else varias condiciones
+//        {
+//            switch (let) {
+//                case "a", "A" ->
+//                    System.out.printf("%s es VOCAL\n", let);
+//                case "e", "E" ->
+//                    System.out.printf("%s es VOCAL\n", let);
+//                case "i", "I" ->
+//                    System.out.printf("%s es VOCAL\n", let);
+//                case "o", "O" ->
+//                    System.out.printf("%s es VOCAL\n", let);
+//                case "u", "U" ->
+//                    System.out.printf("%s es VOCAL\n", let);
+//                default ->
+//                    System.out.printf("%s no es VOCAL\n", let);
+//            }
+//        }
     }
 }

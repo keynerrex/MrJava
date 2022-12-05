@@ -68,5 +68,7 @@ public class swicthDias {
                 System.out.println("Error al digitar");
         }
         System.out.println("El dia es: " + semDia);
+        System.out.println("Este es otro xd");
+
     }
 }
