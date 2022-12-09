@@ -6,7 +6,7 @@ import java.util.Date;
 public class Clientes extends Persona {
 
     private final int idCliente;
-    private Date fechaRegistro;
+    protected Date fechaRegistro;
     private boolean vip;
     private static int contadorCliente;
 
