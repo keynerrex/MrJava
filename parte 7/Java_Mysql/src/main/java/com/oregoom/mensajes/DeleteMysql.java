@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DeleteMysql {
-
+    
     public static void main(String[] args) throws SQLException {
         SelectMysql.listarRegistros();
         borrarRegistros(8);
