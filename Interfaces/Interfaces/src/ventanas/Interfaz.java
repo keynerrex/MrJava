@@ -37,10 +37,10 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jButtonExit = new javax.swing.JButton();
         jLabelIcon = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabelPassword = new javax.swing.JLabel();
         jTextUser = new javax.swing.JTextField();
         jPassword = new javax.swing.JPasswordField();
         jButtonSesion = new javax.swing.JButton();
@@ -51,27 +51,27 @@ public class Interfaz extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonExit.setBackground(new java.awt.Color(0, 0, 51));
+        jButtonExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonExit.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonExit.setText("Salir");
+        jButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonExitActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
+        getContentPane().add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
 
         jLabelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/User.png"))); // NOI18N
         getContentPane().add(jLabelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 250, 250));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Usuario:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelUsuario.setText("Usuario:");
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Password:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelPassword.setText("Password:");
+        getContentPane().add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
         jTextUser.setBackground(new java.awt.Color(0, 0, 51));
         jTextUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -112,10 +112,10 @@ public class Interfaz extends javax.swing.JFrame {
 
     /* COMIENZO*/
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         //Boton Salir
         System.exit(0); //Cerrar Interfaz
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonExitActionPerformed
 
     private void jTextUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextUserActionPerformed
         //Texto Usuario
@@ -127,6 +127,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSesionActionPerformed
         //Boton Iniciar Sesion
+        System.exit(0);
     }//GEN-LAST:event_jButtonSesionActionPerformed
     /* FIN*/
 
@@ -167,12 +168,12 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonExit;
     private javax.swing.JButton jButtonSesion;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelIcon;
+    private javax.swing.JLabel jLabelPassword;
+    private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JPasswordField jPassword;
     private javax.swing.JTextField jTextUser;
     // End of variables declaration//GEN-END:variables
