@@ -18,6 +18,8 @@ public class Main {
         for (String r : meses) {
             System.out.println(r);
         }
+
+        Saludo s = new Saludo();
     }
 
 }
