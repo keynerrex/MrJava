@@ -37,13 +37,13 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonExit = new javax.swing.JButton();
-        jLabelIcon = new javax.swing.JLabel();
+        jButtonSalir = new javax.swing.JButton();
+        jLabelIcono = new javax.swing.JLabel();
         jLabelUsuario = new javax.swing.JLabel();
-        jLabelPassword = new javax.swing.JLabel();
-        jTextUser = new javax.swing.JTextField();
-        jPassword = new javax.swing.JPasswordField();
-        jButtonSesion = new javax.swing.JButton();
+        jLabelContrasena = new javax.swing.JLabel();
+        jTextUsuario = new javax.swing.JTextField();
+        jContrasena = new javax.swing.JPasswordField();
+        jButtonIniciar = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,58 +51,63 @@ public class Interfaz extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonExit.setBackground(new java.awt.Color(0, 0, 51));
-        jButtonExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonExit.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonExit.setText("Salir");
-        jButtonExit.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSalir.setBackground(new java.awt.Color(0, 0, 51));
+        jButtonSalir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonSalir.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExitActionPerformed(evt);
+                jButtonSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
+        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
 
-        jLabelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/User.png"))); // NOI18N
-        getContentPane().add(jLabelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 250, 250));
+        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/User.png"))); // NOI18N
+        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 250, 250));
 
         jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelUsuario.setText("Usuario:");
-        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
-        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelPassword.setText("Password:");
-        getContentPane().add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        jLabelContrasena.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelContrasena.setText("Contraseña:");
+        getContentPane().add(jLabelContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
 
-        jTextUser.setBackground(new java.awt.Color(0, 0, 51));
-        jTextUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextUser.setForeground(new java.awt.Color(255, 255, 255));
-        jTextUser.addActionListener(new java.awt.event.ActionListener() {
+        jTextUsuario.setBackground(new java.awt.Color(0, 0, 51));
+        jTextUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jTextUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextUserActionPerformed(evt);
+                jTextUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 140, -1));
+        getContentPane().add(jTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 140, -1));
 
-        jPassword.setBackground(new java.awt.Color(0, 0, 51));
-        jPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPassword.setForeground(new java.awt.Color(255, 255, 255));
-        jPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordActionPerformed(evt);
+        jContrasena.setBackground(new java.awt.Color(0, 0, 51));
+        jContrasena.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jContrasenaClick(evt);
             }
         });
-        getContentPane().add(jPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 140, -1));
-
-        jButtonSesion.setBackground(new java.awt.Color(0, 0, 51));
-        jButtonSesion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonSesion.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSesion.setText("Iniciar Sesion");
-        jButtonSesion.addActionListener(new java.awt.event.ActionListener() {
+        jContrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSesionActionPerformed(evt);
+                jContrasenaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, -1, -1));
+        getContentPane().add(jContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 140, -1));
+
+        jButtonIniciar.setBackground(new java.awt.Color(0, 0, 51));
+        jButtonIniciar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonIniciar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonIniciar.setText("Iniciar Sesion");
+        jButtonIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIniciarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoAzul.png"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 450));
@@ -112,23 +117,32 @@ public class Interfaz extends javax.swing.JFrame {
 
     /* COMIENZO*/
 
-    private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
         //Boton Salir
         System.exit(0); //Cerrar Interfaz
-    }//GEN-LAST:event_jButtonExitActionPerformed
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
-    private void jTextUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextUserActionPerformed
+    private void jTextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextUsuarioActionPerformed
         //Texto Usuario
-    }//GEN-LAST:event_jTextUserActionPerformed
+    }//GEN-LAST:event_jTextUsuarioActionPerformed
 
-    private void jPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordActionPerformed
-        //Texto Contraseña        
-    }//GEN-LAST:event_jPasswordActionPerformed
+    private void jContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jContrasenaActionPerformed
+        //Texto Contraseña     
 
-    private void jButtonSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSesionActionPerformed
+    }//GEN-LAST:event_jContrasenaActionPerformed
+
+    private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
         //Boton Iniciar Sesion
         System.exit(0);
-    }//GEN-LAST:event_jButtonSesionActionPerformed
+
+
+    }//GEN-LAST:event_jButtonIniciarActionPerformed
+
+    //Evento de click 
+    private void jContrasenaClick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jContrasenaClick
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "No se la digas a nadie");
+    }//GEN-LAST:event_jContrasenaClick
     /* FIN*/
 
     //
@@ -168,13 +182,13 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonExit;
-    private javax.swing.JButton jButtonSesion;
+    private javax.swing.JButton jButtonIniciar;
+    private javax.swing.JButton jButtonSalir;
+    private javax.swing.JPasswordField jContrasena;
+    private javax.swing.JLabel jLabelContrasena;
     private javax.swing.JLabel jLabelFondo;
-    private javax.swing.JLabel jLabelIcon;
-    private javax.swing.JLabel jLabelPassword;
+    private javax.swing.JLabel jLabelIcono;
     private javax.swing.JLabel jLabelUsuario;
-    private javax.swing.JPasswordField jPassword;
-    private javax.swing.JTextField jTextUser;
+    private javax.swing.JTextField jTextUsuario;
     // End of variables declaration//GEN-END:variables
 }
