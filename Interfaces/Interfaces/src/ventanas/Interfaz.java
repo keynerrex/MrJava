@@ -128,7 +128,6 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jContrasenaActionPerformed
         //Texto Contraseña     
-
     }//GEN-LAST:event_jContrasenaActionPerformed
 
     private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
