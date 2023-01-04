@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ventanas;
 
 import java.awt.Image; //Importamos para el logo en vez de jar
@@ -23,6 +19,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     }
 
+    @Override
     public Image getIconImage() {//codigo cambio de logo ejecutable
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logohp.png"));
         return retValue;
@@ -133,7 +130,6 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
         //Boton Iniciar Sesion
         System.exit(0);
-
 
     }//GEN-LAST:event_jButtonIniciarActionPerformed
 
