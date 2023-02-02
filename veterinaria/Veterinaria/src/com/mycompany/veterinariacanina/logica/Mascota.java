@@ -96,11 +96,11 @@ public class Mascota implements Serializable {
         this.observaciones = observaciones;
     }
 
-    public Dueno getUnDuenio() {
+    public Dueno getUnDueno() {
         return unDueno;
     }
 
-    public void setUnDuenio(Dueno unDueno) {
+    public void setUnDueno(Dueno unDueno) {
         this.unDueno = unDueno;
     }
 

@@ -44,8 +44,6 @@ public class CargarDatos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         jLabel3.setText("Nombre:");
 
         jLabel4.setText("Color:");
@@ -159,7 +157,6 @@ public class CargarDatos extends javax.swing.JFrame {
         jLabel1.setText("Carga de Datos");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/veterinariacanina/imagenes/logo.png"))); // NOI18N
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnLimpiar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/veterinariacanina/imagenes/limpiar.png"))); // NOI18N
@@ -217,7 +214,7 @@ public class CargarDatos extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -267,7 +264,7 @@ public class CargarDatos extends javax.swing.JFrame {
         txtCelDueno.setText("");
         txtObservaciones.setText("");
         cmbAlergico.setSelectedIndex(0);
-        cmbAlergico.setSelectedIndex(0);
+        cmbAEspecial.setSelectedIndex(0);
 
     }//GEN-LAST:event_btnLimpiarActionPerformed
 

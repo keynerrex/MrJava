@@ -24,7 +24,7 @@ public class Controladora {
         mascota.setAtencion_especial(atenEsp);
         mascota.setObservaciones(observaciones);
         //uno a uno 
-        mascota.setUnDuenio(dueno);
+        mascota.setUnDueno(dueno);
 
         controlPersis.guardar(dueno, mascota);
     }
