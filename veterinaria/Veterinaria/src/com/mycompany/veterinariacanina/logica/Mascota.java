@@ -72,7 +72,7 @@ public class Mascota implements Serializable {
         this.color = color;
     }
 
-    public String getCalergico() {
+    public String getAlergico() {
         return calergico;
     }
 

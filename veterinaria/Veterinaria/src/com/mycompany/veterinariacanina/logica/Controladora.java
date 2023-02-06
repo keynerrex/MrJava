@@ -1,6 +1,7 @@
 package com.mycompany.veterinariacanina.logica;
 
 import com.mycompany.veterinariacanina.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 public class Controladora {
 
@@ -28,5 +29,17 @@ public class Controladora {
 
         controlPersis.guardar(dueno, mascota);
     }
-//Para guardar en la base de datos -> Le toca a la persistencia
+
+    public List<Mascota> traerMascotas() {
+        //se crea metodo traer mascota
+        return controlPersis.traerMascota();
+    }
+
+    public void borrarMascota(int num_cliente) {
+        controlPersis.borrarMascota(num_cliente);
+
+    }
+
 }
+
+//Para guardar en la base de datos -> Le toca a la persistencia
