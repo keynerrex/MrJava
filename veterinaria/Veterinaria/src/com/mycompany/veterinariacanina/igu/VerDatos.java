@@ -178,6 +178,7 @@ public class VerDatos extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
+    //creamos un metofo JOptionPane para dar mensajes mas rapidos
     public void mostrarMensaje(String mensaje, String tipo, String titulo) {
         JOptionPane optionPane = new JOptionPane(mensaje);
 
@@ -195,9 +196,20 @@ public class VerDatos extends javax.swing.JFrame {
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         //Boton Editar
+        if (tablaMascota.getRowCount() > 0) {
+            //Controlo que se haya seleccionado a una mascota
+            if (tablaMascota.getSelectedRow() != -1) {
+                //Id mascota a editar
+                int num_cliente = Integer.parseInt(String.valueOf(tablaMascota.getValueAt(
+                        tablaMascota.getSelectedRow(), 0)));
     }//GEN-LAST:event_btnEditarActionPerformed
-
-
+         else {
+                mostrarMensaje("No seleccionó ninguna mascota", "Error", "Error al eliminar");
+            }
+        } else {
+            mostrarMensaje("No hay nada para eliminar en la tabla", "Error", "Error al eliminar");
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
