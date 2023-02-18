@@ -209,7 +209,7 @@ public class VerDatos extends javax.swing.JFrame {
         } else {
             mostrarMensaje("No hay nada para eliminar en la tabla", "Error", "Error al eliminar");
         }
-    }
+    } 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
