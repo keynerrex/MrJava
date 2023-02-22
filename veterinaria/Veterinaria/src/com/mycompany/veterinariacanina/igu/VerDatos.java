@@ -202,14 +202,20 @@ public class VerDatos extends javax.swing.JFrame {
                 //Id mascota a editar
                 int num_cliente = Integer.parseInt(String.valueOf(tablaMascota.getValueAt(
                         tablaMascota.getSelectedRow(), 0)));
+                ModificarDatos pantallaModif = new ModificarDatos(num_cliente);
+                pantallaModif.setVisible(true);
+                pantallaModif.setLocationRelativeTo(null);
+                this.dispose();
+
     }//GEN-LAST:event_btnEditarActionPerformed
          else {
-                mostrarMensaje("No seleccionó ninguna mascota", "Error", "Error al eliminar");
+                mostrarMensaje("No seleccionó ninguna mascota", "Error", "Error al editar");
             }
         } else {
-            mostrarMensaje("No hay nada para eliminar en la tabla", "Error", "Error al eliminar");
+            mostrarMensaje("No hay nada para eliminar en la tabla", "Error", "Error al editar");
         }
-    } 
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
@@ -221,7 +227,7 @@ public class VerDatos extends javax.swing.JFrame {
     private javax.swing.JTable tablaMascota;
     // End of variables declaration//GEN-END:variables
 
-    private void cargarTabla() {
+    public void cargarTabla() {
         //Metodo cargando
         //Modelo de tabla
         DefaultTableModel modeloTabla = new DefaultTableModel() {
