@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="build/generated-sources/ap-source-output"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/automovil.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jakarta.persistence-2.2.3.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mysql-connector-j-8.0.31.jar"/>
+	<classpathentry kind="lib" path="dist/lib/org.eclipse.persistence.antlr-2.7.10.jar"/>
+	<classpathentry kind="lib" path="dist/lib/org.eclipse.persistence.asm-9.2.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/org.eclipse.persistence.core-2.7.10.jar"/>
+	<classpathentry kind="lib" path="dist/lib/org.eclipse.persistence.jpa-2.7.10.jar"/>
+	<classpathentry kind="lib" path="dist/lib/org.eclipse.persistence.jpa.jpql-2.7.10.jar"/>
+	<classpathentry kind="lib" path="dist/lib/org.eclipse.persistence.moxy-2.7.10.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

@@ -1,6 +1,11 @@
 package automovil.igu;
 
 import automovil.logica.Controladora;
+import java.awt.AWTEvent;
+import java.awt.Dialog;
+import java.awt.event.AWTEventListener;
+import java.awt.event.FocusListener;
+import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
@@ -100,6 +105,11 @@ public class AltaAutomovil extends javax.swing.JFrame {
         txtPuertas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPuertasActionPerformed(evt);
+            }
+        });
+        txtPuertas.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPuertasKeyTyped(evt);
             }
         });
 
@@ -239,25 +249,41 @@ public class AltaAutomovil extends javax.swing.JFrame {
 
     private void txtPuertasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPuertasActionPerformed
     }//GEN-LAST:event_txtPuertasActionPerformed
-
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         int id;
         String modelo = txtModelo.getText().toUpperCase();
+        if (modelo.equals("")) {
+            mostrarMensaje("Falta modelo del vehiculo", "Info", "Información Faltante");
+        }
         String marca = txtMarca.getText().toUpperCase();
+        if (marca.equals("")) {
+            mostrarMensaje("Es necesaria la marca del vehiculo", "Info", "Información Faltante");
+        }
         String motor = txtMotor.getText().toUpperCase();
+        if (motor.equals("")) {
+            mostrarMensaje("El motor es requerido", "Info", "Información Faltante");
+        }
         String color = txtColor.getText().toUpperCase();
+        if (color.equals("")) {
+            mostrarMensaje("El color es obligatorio", "Info", "Información Faltante");
+        }
         String patente = txtPatente.getText().toUpperCase();
+        if (patente.equals("")) {
+            mostrarMensaje("La patente es obligatoria", "Info", "Información Faltante");
+
+        }
+
         int cantPuertas = Integer.parseInt(txtPuertas.getText().toUpperCase());
+        if (cantPuertas != 2 && cantPuertas != 4) {
 
-        control.agregarAuto(modelo, marca, motor, color, patente, cantPuertas);
-        //Mensaje de confirmacion guardado
-        JOptionPane optionPane = new JOptionPane("GUARDADO");
-        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-        JDialog dialog = optionPane.createDialog("Alta Automovil");
-        dialog.setAlwaysOnTop(true);
-        dialog.setVisible(true);
+            mostrarMensaje("Solo existen autos de 2 o 4 puertas", "Error", "Información Errónea");
+        } else {
+            control.agregarAuto(modelo, marca, motor, color, patente, cantPuertas);
+            JOptionPane.showMessageDialog(null, "Guadado Exitosamente", "Datos Enviados",
+                    JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/automovil/imagenes/icon.png"));
+        }
+
     }//GEN-LAST:event_btnAgregarActionPerformed
-
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         txtModelo.setText("");
         txtMarca.setText("");
@@ -266,6 +292,21 @@ public class AltaAutomovil extends javax.swing.JFrame {
         txtPatente.setText("");
         txtPuertas.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void txtPuertasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPuertasKeyTyped
+        //Permitir Solo numeros
+        int cantNumeros = evt.getKeyChar();
+        //ASII
+        boolean numeros = cantNumeros >= 48 && cantNumeros <= 57;
+
+        if (!numeros) {
+            evt.consume();
+        }
+        if (txtPuertas.getText().trim().length() == 1) {
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txtPuertasKeyTyped
     public void mostrarMensaje(String mensaje, String tipo, String titulo) {
         JOptionPane optionPane = new JOptionPane(mensaje);
 
@@ -276,6 +317,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
             optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
 
         }
+
         JDialog dialog = optionPane.createDialog(titulo);
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
