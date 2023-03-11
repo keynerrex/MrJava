@@ -1,6 +1,7 @@
 package automovil.logica;
 
 import automovil.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 public class Controladora {
 
@@ -16,6 +17,14 @@ public class Controladora {
         auto.setCantPuertas(cantPuertas);
 
         controlPersi.agregarAuto(auto);
+    }
+
+    public List<Automovil> traerAutos() {
+        return controlPersi.traerAutos();
+    }
+
+    public void borrarCarro(int idAuto) {
+        controlPersi.borrarAuto(idAuto);
     }
 
 }

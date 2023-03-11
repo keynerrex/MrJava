@@ -32,7 +32,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btnConsulta.setText("Consulta Edición y Baja");
+        btnConsulta.setText("Consulta, Edición y Baja");
         btnConsulta.setFocusable(false);
         btnConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +100,9 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
-
+        ConsultaAutomovil consultAuto = new ConsultaAutomovil();
+        consultAuto.setVisible(true);
+        consultAuto.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
