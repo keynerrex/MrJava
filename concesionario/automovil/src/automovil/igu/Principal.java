@@ -1,11 +1,11 @@
 package automovil.igu;
 
 public class Principal extends javax.swing.JFrame {
-    
+
     public Principal() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -103,6 +103,7 @@ public class Principal extends javax.swing.JFrame {
         ConsultaAutomovil consultAuto = new ConsultaAutomovil();
         consultAuto.setVisible(true);
         consultAuto.setLocationRelativeTo(null);
+        this.setVisible(false);
     }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -113,6 +114,8 @@ public class Principal extends javax.swing.JFrame {
         AltaAutomovil pantAlta = new AltaAutomovil();
         pantAlta.setVisible(true);
         pantAlta.setLocationRelativeTo(null);
+        this.setVisible(false);
+
     }//GEN-LAST:event_btnAltaActionPerformed
 
 

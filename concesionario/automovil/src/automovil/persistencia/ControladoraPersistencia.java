@@ -27,4 +27,16 @@ public class ControladoraPersistencia {
         }
     }
 
+    public Automovil traerAuto(int idAuto) {
+        return autoJpa.findAutomovil(idAuto);
+    }
+
+    public void modificarCarro(Automovil auto) {
+        try {
+            autoJpa.edit(auto);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }

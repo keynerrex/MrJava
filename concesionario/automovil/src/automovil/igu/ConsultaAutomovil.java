@@ -10,9 +10,11 @@ import javax.swing.table.DefaultTableModel;
 
 public class ConsultaAutomovil extends javax.swing.JFrame {
 
-    Controladora control = new Controladora();
+    Controladora control = null;
+    Principal panInicio = null;
 
     public ConsultaAutomovil() {
+        control = new Controladora();
         initComponents();
     }
 
@@ -182,9 +184,32 @@ public class ConsultaAutomovil extends javax.swing.JFrame {
     }
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
 
+        if (tablaCarros.getRowCount() > 0) {
+
+            if (tablaCarros.getSelectedRow() != -1) {
+                //Obtener id carro
+                //int idAuto = Integer.parseInt(String.valueOf(tablaCarros.getValueAt(tablaCarros.getSelectedRow(), 0)));
+
+                //Edicion
+                int idAuto = (int) tablaCarros.getValueAt(tablaCarros.getSelectedRow(), 0);
+                EditarAutomovil editarCarro = new EditarAutomovil(idAuto);
+                editarCarro.setVisible(true);
+                editarCarro.setLocationRelativeTo(null);
+            } else {
+                mostrarMensaje("No seleccionó un registro para editar", "Error", "Error al Editar");
+            }
+
+        } else {
+            mostrarMensaje("La tabla está vacía, no se puede editar", "Error", "Error al Editar");
+        }
+
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        panInicio = new Principal();
+        panInicio.setVisible(true);
+        panInicio.setLocationRelativeTo(null);
+
         this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
 
@@ -194,8 +219,8 @@ public class ConsultaAutomovil extends javax.swing.JFrame {
 
             if (tablaCarros.getSelectedRow() != -1) {
                 //Obtener id carro
-                int idAuto = Integer.parseInt(String.valueOf(tablaCarros.getValueAt(tablaCarros.getSelectedRow(), 0)));
-
+//                int idAuto = Integer.parseInt(String.valueOf(tablaCarros.getValueAt(tablaCarros.getSelectedRow(), 0)));
+                int idAuto = (int) tablaCarros.getValueAt(tablaCarros.getSelectedRow(), 0);
                 control.borrarCarro(idAuto);
                 mostrarMensaje("Carro Dado de Baja", "Info", "Borrado");
                 cargarTabla();
@@ -205,7 +230,7 @@ public class ConsultaAutomovil extends javax.swing.JFrame {
             }
 
         } else {
-            mostrarMensaje("La tabla está vacía", "Error", "Error al Eliminar");
+            mostrarMensaje("La tabla está vacía, no se puede borrar", "Error", "Error al Eliminar");
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
