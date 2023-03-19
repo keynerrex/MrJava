@@ -46,12 +46,15 @@ public class AltaAutomovil extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setText("Alta de Carros");
 
         jLabelModelo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelModelo.setText("Modelo:");
 
+        txtModelo.setBackground(new java.awt.Color(255, 255, 255));
         txtModelo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +67,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jLabelMarca.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelMarca.setText("Marca:");
 
+        txtMarca.setBackground(new java.awt.Color(255, 255, 255));
         txtMarca.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtMarca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +78,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jLabelColor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelColor.setText("Color:");
 
+        txtColor.setBackground(new java.awt.Color(255, 255, 255));
         txtColor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtColor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +89,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jLabelMotor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelMotor.setText("Motor:");
 
+        txtMotor.setBackground(new java.awt.Color(255, 255, 255));
         txtMotor.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtMotor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +100,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jLabelPatente.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelPatente.setText("Patente:");
 
+        txtPatente.setBackground(new java.awt.Color(255, 255, 255));
         txtPatente.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtPatente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +111,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jLabelPuertas.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelPuertas.setText("Puertas:");
 
+        txtPuertas.setBackground(new java.awt.Color(255, 255, 255));
         txtPuertas.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         txtPuertas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,9 +146,17 @@ public class AltaAutomovil extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel3.setText("KEYNERREX");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnVolver.setBackground(new java.awt.Color(255, 0, 0));
+        btnVolver.setForeground(new java.awt.Color(0, 0, 0));
         btnVolver.setText("Volver");
+        btnVolver.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
+        btnVolver.setBorderPainted(false);
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver.setFocusable(false);
+        btnVolver.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnVolver.setIconTextGap(10);
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);
@@ -152,9 +168,8 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnVolver)
-                .addGap(93, 93, 93)
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -196,9 +211,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnVolver)))
+                    .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
