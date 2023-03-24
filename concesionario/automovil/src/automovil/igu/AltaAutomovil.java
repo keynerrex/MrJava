@@ -148,7 +148,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
         jLabel3.setText("KEYNERREX");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnVolver.setBackground(new java.awt.Color(255, 0, 0));
+        btnVolver.setBackground(new java.awt.Color(255, 255, 255));
         btnVolver.setForeground(new java.awt.Color(0, 0, 0));
         btnVolver.setText("Volver");
         btnVolver.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));

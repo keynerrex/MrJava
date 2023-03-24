@@ -1,6 +1,7 @@
 package com.keynerrex.ilib;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+import com.keynerrex.views.Prestamos;
 import com.keynerrex.views.Principal;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -14,7 +15,7 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         initStyles();
         setDate();
-        initContent();
+        initPrincipal();
     }
 
     //Estilos Flat Material
@@ -38,7 +39,8 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     //Iniciacion de Jpanel Principal
-    public void initContent() {
+    public void initPrincipal() {
+
         Principal panPrincipal = new Principal();
         panPrincipal.setSize(750, 430);
         panPrincipal.setLocation(0, 0);
@@ -49,17 +51,27 @@ public class Dashboard extends javax.swing.JFrame {
         content.repaint();
     }
 
-    public static void main(String[] args) {
-        FlatMaterialLighterIJTheme.setup();
+    public void initPrestamos() {
+        Prestamos panPrestamos = new Prestamos();
+        panPrestamos.setSize(750, 430);
+        panPrestamos.setLocation(0, 0);
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Dashboard().setVisible(true);
-            }
-
-        });
-
+        content.removeAll();
+        content.add(panPrestamos, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
     }
+//    public static void main(String[] args) {
+//        FlatMaterialLighterIJTheme.setup();
+//
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Dashboard().setVisible(true);
+//            }
+//
+//        });
+//
+//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -253,7 +265,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
                     .addComponent(labelAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(405, Short.MAX_VALUE))
         );
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,7 +284,7 @@ public class Dashboard extends javax.swing.JFrame {
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,12 +303,12 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
-                    .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+                        .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,10 +352,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLibrosActionPerformed
 
     private void btnPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrestamosActionPerformed
-        // TODO add your handling code here:
+        initPrestamos();
     }//GEN-LAST:event_btnPrestamosActionPerformed
 
     private void btnPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrincipalActionPerformed
+        initPrincipal();
 
     }//GEN-LAST:event_btnPrincipalActionPerformed
 
@@ -365,4 +378,5 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel mensaje;
     private javax.swing.JPanel menu;
     // End of variables declaration//GEN-END:variables
+
 }
