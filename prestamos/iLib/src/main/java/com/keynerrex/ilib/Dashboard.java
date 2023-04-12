@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import javax.swing.JPanel;
 
 public class Dashboard extends javax.swing.JFrame {
 
@@ -15,7 +16,7 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         initStyles();
         setDate();
-        initPrincipal();
+        initPanel();
     }
 
     //Estilos Flat Material
@@ -38,40 +39,21 @@ public class Dashboard extends javax.swing.JFrame {
         labelFecha.setText(now.format(DateTimeFormatter.ofPattern("'Hoy es 'EEEE dd 'de' MMMM 'de' yyyy", spanishLocale)));
     }
 
-    //Iniciacion de Jpanel Principal
-    public void initPrincipal() {
+    //Remplazo de Jpanels
+    private void initPanel() {
+        remplazarPanel(new Principal());
+    }
 
-        Principal panPrincipal = new Principal();
-        panPrincipal.setSize(750, 430);
-        panPrincipal.setLocation(0, 0);
+    //crear panel en blanco
+    private void remplazarPanel(JPanel panel) {
+        panel.setSize(750, 430);
+        panel.setLocation(0, 0);
 
         content.removeAll();
-        content.add(panPrincipal, BorderLayout.CENTER);
+        content.add(panel, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
     }
-
-    public void initPrestamos() {
-        Prestamos panPrestamos = new Prestamos();
-        panPrestamos.setSize(750, 430);
-        panPrestamos.setLocation(0, 0);
-
-        content.removeAll();
-        content.add(panPrestamos, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
-    }
-//    public static void main(String[] args) {
-//        FlatMaterialLighterIJTheme.setup();
-//
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new Dashboard().setVisible(true);
-//            }
-//
-//        });
-//
-//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -352,11 +334,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLibrosActionPerformed
 
     private void btnPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrestamosActionPerformed
-        initPrestamos();
+        remplazarPanel(new Prestamos());
     }//GEN-LAST:event_btnPrestamosActionPerformed
 
     private void btnPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrincipalActionPerformed
-        initPrincipal();
+        remplazarPanel(new Principal());
 
     }//GEN-LAST:event_btnPrincipalActionPerformed
 
