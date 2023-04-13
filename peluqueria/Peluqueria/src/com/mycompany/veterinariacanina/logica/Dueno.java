@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Dueno implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_dueno;
     private String nombre;
     private String celDueno;

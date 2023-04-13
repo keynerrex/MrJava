@@ -15,7 +15,7 @@ public class Mascota implements Serializable {
 //por encima de los campos
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int num_cliente;
     private String nombre;
     private String raza;
