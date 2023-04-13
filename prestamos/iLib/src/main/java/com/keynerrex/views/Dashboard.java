@@ -1,4 +1,4 @@
-package com.keynerrex.ilib;
+package com.keynerrex.views;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import com.keynerrex.views.Prestamos;

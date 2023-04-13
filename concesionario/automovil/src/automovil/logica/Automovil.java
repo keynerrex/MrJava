@@ -11,7 +11,7 @@ public class Automovil implements Serializable {
 
     //Atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String modelo;
     private String marca;
