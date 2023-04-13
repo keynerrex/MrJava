@@ -54,7 +54,7 @@ public class MascotaJpaController implements Serializable {
             if (msg == null || msg.length() == 0) {
                 int id = mascota.getNum_cliente();
                 if (findMascota(id) == null) {
-                    throw new NonexistentEntityException("The mascota with id " + id + " no longer exists.");
+                    throw new NonexistentEntityException("La mascota con el " + id + " no existe.");
                 }
             }
             throw ex;
@@ -75,7 +75,7 @@ public class MascotaJpaController implements Serializable {
                 mascota = em.getReference(Mascota.class, id);
                 mascota.getNum_cliente();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The mascota with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("La mascota con el " + id + " no existe.", enfe);
             }
             em.remove(mascota);
             em.getTransaction().commit();

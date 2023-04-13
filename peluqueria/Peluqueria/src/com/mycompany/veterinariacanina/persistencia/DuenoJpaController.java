@@ -54,7 +54,7 @@ public class DuenoJpaController implements Serializable {
             if (msg == null || msg.length() == 0) {
                 int id = dueno.getId_dueno();
                 if (findDueno(id) == null) {
-                    throw new NonexistentEntityException("The dueno with id " + id + " no longer exists.");
+                    throw new NonexistentEntityException("El dueño con el " + id + " no existe.");
                 }
             }
             throw ex;
@@ -75,7 +75,7 @@ public class DuenoJpaController implements Serializable {
                 dueno = em.getReference(Dueno.class, id);
                 dueno.getId_dueno();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The dueno with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("El dueño con el " + id + " no existe.", enfe);
             }
             em.remove(dueno);
             em.getTransaction().commit();
