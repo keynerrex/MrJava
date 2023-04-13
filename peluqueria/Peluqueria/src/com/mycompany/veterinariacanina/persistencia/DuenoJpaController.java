@@ -131,5 +131,4 @@ public class DuenoJpaController implements Serializable {
             em.close();
         }
     }
-
 }

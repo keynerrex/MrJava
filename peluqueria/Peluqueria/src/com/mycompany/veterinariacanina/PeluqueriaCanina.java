@@ -1,6 +1,7 @@
 package com.mycompany.veterinariacanina;
 
 import com.mycompany.veterinariacanina.igu.Principal;
+import java.util.Arrays;
 
 public class PeluqueriaCanina {
 
@@ -8,6 +9,6 @@ public class PeluqueriaCanina {
         Principal princ = new Principal();
         princ.setVisible(true);
         princ.setLocationRelativeTo(null);
+
     }
 }
- 
