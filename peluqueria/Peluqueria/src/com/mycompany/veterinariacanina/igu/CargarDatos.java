@@ -6,10 +6,10 @@ import javax.swing.JOptionPane;
 
 public class CargarDatos extends javax.swing.JFrame {
 
-    Controladora control = new Controladora();
+    Controladora control = null;
 
     public CargarDatos() {
-//        control = new Controladora();
+        control = new Controladora();
         initComponents();
 
     }

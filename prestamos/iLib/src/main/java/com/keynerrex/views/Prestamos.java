@@ -9,9 +9,9 @@ public class Prestamos extends javax.swing.JPanel {
     }
 
     private void initStyles() {
-        tituloFolio.putClientProperty("FlatLaf.styleClass","large");
+        tituloFolio.putClientProperty("FlatLaf.styleClass", "large");
         tituloFolio.setForeground(Color.BLACK);
-        tituloLibro.putClientProperty("FlatLaf.styleClass","large");
+        tituloLibro.putClientProperty("FlatLaf.styleClass", "large");
         tituloLibro.setForeground(Color.BLACK);
 
     }
@@ -56,6 +56,11 @@ public class Prestamos extends javax.swing.JPanel {
         titulo.setText("Nuevo Prestamo");
 
         txtFolioUsr1.setForeground(new java.awt.Color(102, 102, 102));
+        txtFolioUsr1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFolioUsr1ActionPerformed(evt);
+            }
+        });
 
         jSeparator3.setForeground(new java.awt.Color(0, 153, 255));
 
@@ -139,6 +144,11 @@ public class Prestamos extends javax.swing.JPanel {
             .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtFolioUsr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFolioUsr1ActionPerformed
+        //txt Folio
+
+    }//GEN-LAST:event_txtFolioUsr1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
