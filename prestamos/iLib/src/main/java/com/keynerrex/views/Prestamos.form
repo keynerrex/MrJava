@@ -95,24 +95,24 @@
               <Component id="Image" pref="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="jSeparator1" min="-2" pref="360" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jSeparator1" max="32767" attributes="0"/>
+                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="tituloFolio" pref="19" max="32767" attributes="0"/>
+                  <Component id="tituloFolio" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="txtFolioUsr1" pref="21" max="32767" attributes="0"/>
+                  <Component id="txtFolioUsr1" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                  <Component id="jSeparator3" pref="2" max="32767" attributes="0"/>
+                  <Component id="jSeparator3" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="tituloLibro" pref="19" max="32767" attributes="0"/>
+                  <Component id="tituloLibro" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="txtFolioUsr" pref="21" max="32767" attributes="0"/>
+                  <Component id="txtFolioUsr" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                  <Component id="jSeparator2" pref="4" max="32767" attributes="0"/>
+                  <Component id="jSeparator2" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                  <Component id="btnPrestar" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="btnPrestar" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
           </Group>

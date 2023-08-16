@@ -1,7 +1,6 @@
 package com.keynerrex.views;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
-import com.keynerrex.views.Devoluciones;
 import com.keynerrex.views.Prestamos;
 import com.keynerrex.views.Principal;
 import java.awt.BorderLayout;
@@ -21,7 +20,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     //Estilos Flat Material
-    private void initStyles() {
+    public void initStyles() {
         mensaje.putClientProperty("FlatLaf.style", "font: 14 $light.font");
         mensaje.setForeground(Color.BLACK);
         labelAdmin.putClientProperty("FlatLaf.style", "font: bold $h1.regular.font");
@@ -33,14 +32,13 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     //Funcion para fecha
-    private void setDate() {
+    public void setDate() {
         //Revisar
         LocalDate now = LocalDate.now();
         Locale spanishLocale = new Locale("es", "ES");
         labelFecha.setText(now.format(DateTimeFormatter.ofPattern("'Hoy es 'EEEE dd 'de' MMMM 'de' yyyy", spanishLocale)));
     }
 
-<<<<<<< Updated upstream:prestamos/iLib/src/main/java/com/keynerrex/views/Dashboard.java
     //Remplazo de Jpanels
     private void initPanel() {
         remplazarPanel(new Principal());
@@ -57,32 +55,6 @@ public class Dashboard extends javax.swing.JFrame {
         content.repaint();
     }
 
-=======
-    private void mostrarPanel(JPanel p) {
-        p.setSize(750, 430);
-        p.setLocation(0, 0);
-
-        content.removeAll();
-        content.add(p, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
-    }
-
-    //Iniciacion de Jpanel Principal
-    private void initPrincipal() {
-
-        mostrarPanel(new Principal());
-    }
-
-    private void initPrestamos() {
-        mostrarPanel(new Prestamos());
-    }
-
-    private void initDevolucion() {
-        mostrarPanel(new Devoluciones());
-    }
-    
->>>>>>> Stashed changes:prestamos/iLib/src/main/java/com/keynerrex/ilib/Dashboard.java
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -104,10 +76,8 @@ public class Dashboard extends javax.swing.JFrame {
         mensaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1050, 660));
 
         background.setForeground(new java.awt.Color(255, 255, 255));
-        background.setMinimumSize(new java.awt.Dimension(50, 50));
 
         menu.setBackground(new java.awt.Color(13, 71, 161));
         menu.setPreferredSize(new java.awt.Dimension(270, 640));
@@ -180,11 +150,6 @@ public class Dashboard extends javax.swing.JFrame {
         btnDevoluciones.setFocusable(false);
         btnDevoluciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnDevoluciones.setIconTextGap(10);
-        btnDevoluciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDevolucionesActionPerformed(evt);
-            }
-        });
 
         btnUsuarios.setBackground(new java.awt.Color(21, 101, 226));
         btnUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -376,10 +341,6 @@ public class Dashboard extends javax.swing.JFrame {
         remplazarPanel(new Principal());
 
     }//GEN-LAST:event_btnPrincipalActionPerformed
-
-    private void btnDevolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionesActionPerformed
-        initDevolucion();
-    }//GEN-LAST:event_btnDevolucionesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -11,4 +11,5 @@ public class Main extends Dashboard {
         Dashboard dashboard = new Dashboard();
         dashboard.setVisible(true);
     }
+
 }
